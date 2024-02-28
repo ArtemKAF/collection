@@ -1,0 +1,7 @@
+*
+!src/backend/
+!infra/backend/requirements/
+**/.env
+**/db.sqlite3
+**/Dockerfile
+**/__pycache__/
