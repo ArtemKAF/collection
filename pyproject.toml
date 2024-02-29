@@ -22,7 +22,8 @@ django-filter = "^23.5"
 pre-commit = "^3.6.2"
 black = "^24.2.0"
 isort = "^5.13.2"
-mypy = "^1.8.0"
+mypy = "1.7.0"
+django-stubs = {extras = ["compatible-mypy"], version = "^4.2.7"}
 
 [build-system]
 requires = ["poetry-core"]
@@ -44,3 +45,10 @@ extend-exclude = """
   | migrations
 )/
 """
+
+[tool.mypy]
+exclude = "migrations"
+ignore_missing_imports = true
+
+[tool.django-stubs]
+django_settings_module = "config.settings.prod"

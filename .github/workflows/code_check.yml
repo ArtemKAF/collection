@@ -39,10 +39,10 @@ jobs:
       run: |
         poetry run black --check src/backend/
 
-    - name: Run black
+    - name: Run isort
       run: |
         poetry run isort -c src/backend/
 
-    - name: Run black
+    - name: Run mypy
       run: |
         poetry run mypy src/backend/
