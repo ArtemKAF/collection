@@ -37,4 +37,12 @@ jobs:
 
     - name: Run black
       run: |
-        poetry run black --check .
+        poetry run black --check src/backend/
+
+    - name: Run black
+      run: |
+        poetry run isort -c src/backend/
+
+    - name: Run black
+      run: |
+        poetry run mypy src/backend/
