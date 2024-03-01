@@ -18,10 +18,7 @@ RESTfull API приложение, разработанное в рамках т
 1. **Python 3.12**  
 
 2. **Poetry**  
-   Зависимости и пакеты управляются через [poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
-   ```
-   poetry install --no-root
-   ```
+    Зависимости и пакеты управляются через [poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
     [документация](https://python-poetry.org/docs/basic-usage/).  
 
 3. **Docker Compose**  
@@ -50,7 +47,7 @@ python manage.py runserver --settings config.settings.local
 - В корневой директории проекта подготовить файл .env и наполнить по шаблону из .env.example
 - В терминале из директории infra выполнить команду
 ```
-sudo docker compose up -d
+sudo docker compose -f docker-compose-local.yaml up -d
 ```
 По завершении работы команды проект станет доступен по адресу [http://localhost/](http://localhost/) или [http://127.0.0.1/](http://127.0.0.1/)  
 
