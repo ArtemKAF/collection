@@ -40,3 +40,13 @@ LOGGING = {
         },
     },
 }
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "OPTIONS": {
+            "TIMEOUT": 3600,
+            "MAX_ENTRIES": 5000,
+        },
+    }
+}

@@ -86,20 +86,6 @@ class Collect(CreatedField):
 
         return self.name
 
-    @cached_property
-    def collected_amount(self):
-        """Свойство собранных средств на текущий момент."""
-
-        return (
-            self.contributors.aggregate(Sum("amount")).get("amount_sum") or 0
-        )
-
-    @cached_property
-    def contributors_count(self):
-        """Свойство количества пожертвовавших."""
-
-        return self.contributors.count()
-
 
 class Reason(models.Model):
     """Модель цели сбора денежных средств."""

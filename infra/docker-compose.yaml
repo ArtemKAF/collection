@@ -50,6 +50,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      redis:
+        condition: service_healthy
 
   nginx:
     image: nginx:1.25.2-alpine3.18-slim
@@ -63,3 +65,18 @@ services:
     depends_on:
       backend:
         condition: service_started
+
+  redis:
+    image: redis:alpine3.18
+    restart: unless-stopped
+    volumes:
+      - ./redis-data:/data
+    environment:
+      - REDIS_MAX_MEMORY=256m
+      - REDIS_COMPRESSION=yes
+      - REDIS_AOF=everysec
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5

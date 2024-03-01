@@ -12,6 +12,7 @@ RESTfull API приложение, разработанное в рамках т
 [![Postgres][Postgres-badge]][Postgres-url]
 [![Nginx][Nginx-badge]][Nginx-url]
 [![Docker Compose][Docker Compose-badge]][Docker Compose-url]
+[![Redis][Redis-badge]][Redis-url]
 
 ## Требования
 
@@ -35,8 +36,10 @@ poetry shell
 poetry install --no-root
 ```
 - В корневой директории проекта подготовить файл .env и наполнить по шаблону из .env.example
-- В терминале из директории src/backend выполнить команду
+- В терминале из директории src/backend выполнить следующие команды
 ```
+python manage.py migrate --settings config.settings.local
+python manage.py upload --settings config.settings.local
 python manage.py runserver --settings config.settings.local
 ```
 По завершении работы команды проект станет доступен по адресу [http://localhost:8000/](http://localhost:8000/) или [http://127.0.0.1:8000/](http://127.0.0.1:8000/)  
@@ -47,7 +50,7 @@ python manage.py runserver --settings config.settings.local
 - В корневой директории проекта подготовить файл .env и наполнить по шаблону из .env.example
 - В терминале из директории infra выполнить команду
 ```
-sudo docker compose -f docker-compose-local.yaml up -d
+sudo docker compose up -d
 ```
 По завершении работы команды проект станет доступен по адресу [http://localhost/](http://localhost/) или [http://127.0.0.1/](http://127.0.0.1/)  
 
@@ -78,3 +81,7 @@ sudo docker compose -f docker-compose-local.yaml up -d
 [Docker Compose-badge]: https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white
 
 [Docker Compose-url]: https://docs.docker.com/compose/
+
+[Redis-badge]: https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white
+
+[Redis-url]: https://redis.io/
