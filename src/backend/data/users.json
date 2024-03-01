@@ -1,0 +1,314 @@
+[
+ {
+   "first_name": "Анна",
+   "last_name": "Петрова",
+   "email": "petrova@ya.fake",
+   "username": "SpaceRider"
+ },
+ {
+   "first_name": "Олеся",
+   "last_name": "Иванова",
+   "email": "ivanova@ya.fake",
+   "username": "CyberPirate"
+ },
+ {
+   "first_name": "Елена",
+   "last_name": "Ересеева",
+   "email": "ereseeva@ya.fake",
+   "username": "ElectricRay"
+ },
+ {
+   "first_name": "Михаил",
+   "last_name": "Логинов",
+   "email": "loginov@ya.fake",
+   "username": "ForceMaster"
+ },
+ {
+   "first_name": "Константин",
+   "last_name": "Дуров",
+   "email": "durov@ya.fake",
+   "username": "GhostHunter"
+ },
+ {
+   "first_name": "Евгений",
+   "last_name": "Сидоров",
+   "email": "sidorov@ya.fake",
+   "username": "IceBreaker"
+ },
+ {
+   "first_name": "Марина",
+   "last_name": "Гоголева",
+   "email": "gogoleva@ya.fake",
+   "username": "Magician"
+ },
+ {
+   "first_name": "Николай",
+   "last_name": "Кошкин",
+   "email": "koshkin@ya.fake",
+   "username": "NinjaStar"
+ },
+ {
+   "first_name": "Алена",
+   "last_name": "Кудряшова",
+   "email": "kudryashova@ya.fake",
+   "username": "PhoenixRising"
+ },
+ {
+   "first_name": "Полина",
+   "last_name": "Кудрявцева",
+   "email": "kudryavceva@ya.fake",
+   "username": "ShadowDancer"
+ },
+ {
+   "first_name": "Марьяна",
+   "last_name": "Потапова",
+   "email": "potapova@ya.fake",
+   "username": "SniperGalaxy"
+ },
+ {
+   "first_name": "Алексей",
+   "last_name": "Дурьянов",
+   "email": "duryanov@ya.fake",
+   "username": "StarGladiator"
+ },
+ {
+   "first_name": "Артем",
+   "last_name": "Михайлов",
+   "email": "mikshailov@ya.fake",
+   "username": "TrinityForce"
+ },
+ {
+   "first_name": "Кристина",
+   "last_name": "Рыбина",
+   "email": "rybina@ya.fake",
+   "username": "VortexRider"
+ },
+ {
+   "first_name": "Любовь",
+   "last_name": "Русакова",
+   "email": "rusakova@ya.fake",
+   "username": "WarlockWizard"
+ },
+ {
+   "first_name": "Ксения",
+   "last_name": "Нефедова",
+   "email": "nefedova@ya.fake",
+   "username": "WizardSorcerer"
+ },
+ {
+   "first_name": "Ирина",
+   "last_name": "Митякова",
+   "email": "mityakova@ya.fake",
+   "username": "X-RayPulsar"
+ },
+ {
+   "first_name": "Роман",
+   "last_name": "Жаворонков",
+   "email": "zhavoronkov@ya.fake",
+   "username": "YakuzaStriker"
+ },
+ {
+   "first_name": "Олег",
+   "last_name": "Яблоков",
+   "email": "yablokov@ya.fake",
+   "username": "ZenMaster"
+ },
+ {
+   "first_name": "Кирилл",
+   "last_name": "Абрамов",
+   "email": "abramov@ya.fake",
+   "username": "AetherSurfer"
+ },
+ {
+   "first_name": "Никита",
+   "last_name": "Федоров",
+   "email": "fedorov@ya.fake",
+   "username": "GhostWalker"
+ },
+ {
+   "first_name": "Петр",
+   "last_name": "Никитин",
+   "email": "nikitin@ya.fake",
+   "username": "IceDragon"
+ },
+ {
+   "first_name": "Наталья",
+   "last_name": "Воротнякова",
+   "email": "vorotnyakova@ya.fake",
+   "username": "MagusMage"
+ },
+ {
+   "first_name": "Екатерина",
+   "last_name": "Ледова",
+   "email": "ledova@ya.fake",
+   "username": "PhoenixBurner"
+ },
+ {
+   "first_name": "Дмитрий",
+   "last_name": "Лезов",
+   "email": "lezov@ya.fake",
+   "username": "SamuraiGhost"
+ },
+ {
+   "first_name": "Георгий",
+   "last_name": "Окулев",
+   "email": "okulev@ya.fake",
+   "username": "StarBender"
+ },
+ {
+   "first_name": "Василиса",
+   "last_name": "Лебедева",
+   "email": "lebedeva@ya.fake",
+   "username": "TrinityMage"
+ },
+ {
+   "first_name": "Егор",
+   "last_name": "Седов",
+   "email": "sedov@ya.fake",
+   "username": "VortexSoul"
+ },
+ {
+   "first_name": "Вячеслав",
+   "last_name": "Локин",
+   "email": "lokin@ya.fake",
+   "username": "WarlockBreaker"
+ },
+ {
+   "first_name": "Ольга",
+   "last_name": "Орлова",
+   "email": "orlova@ya.fake",
+   "username": "WizardBlazer"
+ },
+ {
+   "first_name": "Татьяна",
+   "last_name": "Шокова",
+   "email": "shokova@ya.fake",
+   "username": "X-WingPirate"
+ },
+ {
+   "first_name": "Анастасия",
+   "last_name": "Сафонова",
+   "email": "safonova@ya.fake",
+   "username": "YakuzaRider"
+ },
+ {
+   "first_name": "Юлия",
+   "last_name": "Амбарова",
+   "email": "ambarova@ya.fake",
+   "username": "ZenGladiator"
+ },
+ {
+   "first_name": "Елизавета",
+   "last_name": "Тимофеева",
+   "email": "timofeeva@ya.fake",
+   "username": "AetherWeaver"
+ },
+ {
+   "first_name": "Михаил",
+   "last_name": "Кондратьев",
+   "email": "kondratev@ya.fake",
+   "username": "GhostRider"
+ },
+ {
+   "first_name": "Александра",
+   "last_name": "Романова",
+   "email": "romanova@ya.fake",
+   "username": "IceNova"
+ },
+ {
+   "first_name": "Сергей",
+   "last_name": "Хрулев",
+   "email": "khrulev@ya.fake",
+   "username": "MagusMaster"
+ },
+ {
+   "first_name": "Андрей",
+   "last_name": "Аксенов",
+   "email": "aksenov@ya.fake",
+   "username": "PhoenixChaser"
+ },
+ {
+   "first_name": "Светлана",
+   "last_name": "Рядовая",
+   "email": "ryadovaya@ya.fake",
+   "username": "SamuraiMage"
+ },
+ {
+   "first_name": "Мирина",
+   "last_name": "Бельская",
+   "email": "belskaya@ya.fake",
+   "username": "StarDancer"
+ },
+ {
+   "first_name": "Дмитрий",
+   "last_name": "Клягин",
+   "email": "klyagin@ya.fake",
+   "username": "TrinitySurfer"
+ },
+ {
+   "first_name": "Игорь",
+   "last_name": "Бантеев",
+   "email": "banteev@ya.fake",
+   "username": "VortexWanderer"
+ },
+ {
+   "first_name": "Иван",
+   "last_name": "Пронин",
+   "email": "pronin@ya.fake",
+   "username": "WarlockRider"
+ },
+ {
+   "first_name": "Анатолий",
+   "last_name": "Лисин",
+   "email": "lisin@ya.fake",
+   "username": "WizardSoul"
+ },
+ {
+   "first_name": "Александр",
+   "last_name": "Строгин",
+   "email": "strogin@ya.fake",
+   "username": "X-PulsarPirate"
+ },
+ {
+   "first_name": "Марк",
+   "last_name": "Семичаевский",
+   "email": "semichaevsky@ya.fake",
+   "username": "YakuzaSurfer"
+ },
+ {
+   "first_name": "Дарья",
+   "last_name": "Шорина",
+   "email": "shorina@ya.fake",
+   "username": "ZenRider"
+ },
+ {
+   "first_name": "Эльвира",
+   "last_name": "Нестерова",
+   "email": "nesterova@ya.fake",
+   "username": "AetherDreamer"
+ },
+ {
+   "first_name": "Галина",
+   "last_name": "Дольщина",
+   "email": "dolcshina@ya.fake",
+   "username": "GhostSurfer"
+ },
+ {
+   "first_name": "Андрей",
+   "last_name": "Телегин",
+   "email": "telegin@ya.fake",
+   "username": "IceRider"
+ },
+ {
+   "first_name": "Иван",
+   "last_name": "Иванов",
+   "email": "ivanivanov@ya.fake",
+   "username": "MoonWanderer"
+ },
+ {
+   "first_name": "Алексей",
+   "last_name": "Газманов",
+   "email": "gazmanow@ya.fake",
+   "username": "SunWanderer"
+ }
+]

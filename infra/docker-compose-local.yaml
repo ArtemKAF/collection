@@ -44,6 +44,7 @@ services:
         cp -r /app/collected_static/. /backend_static/static
         python manage.py makemigrations
         python manage.py migrate
+        python manage.py upload
         gunicorn --bind 0.0.0.0:8000 config.wsgi
     restart: unless-stopped
     depends_on:
