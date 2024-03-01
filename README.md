@@ -11,6 +11,7 @@ RESTfull API приложение, разработанное в рамках т
 [![DRF][DRF-badge]][DRF-url]
 [![Postgres][Postgres-badge]][Postgres-url]
 [![Nginx][Nginx-badge]][Nginx-url]
+[![Docker Compose][Docker Compose-badge]][Docker Compose-url]
 
 ## Требования
 
@@ -76,3 +77,7 @@ sudo docker compose up -d
 [Nginx-url]: https://nginx.org
 
 [Nginx-badge]: https://img.shields.io/badge/nginx-009900?style=for-the-badge&logo=nginx&logoColor=white
+
+[Docker Compose-badge]: https://img.shields.io/badge/Docker_Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white
+
+[Docker Compose-url]: https://docs.docker.com/compose/

@@ -46,6 +46,8 @@ include = "src/backend/"
 extend-exclude = """
 /(
   | migrations
+  | media
+  | data
 )/
 """
 
