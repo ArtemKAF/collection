@@ -17,7 +17,7 @@ User = get_user_model()
 class Collect(CreatedField):
     """Модель сбора денежных средств."""
 
-    author = models.ForeignKey(
+    author: models.ForeignKey = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
         verbose_name="Автор",
@@ -25,13 +25,13 @@ class Collect(CreatedField):
         null=False,
         blank=False,
     )
-    name = models.CharField(
+    name: models.CharField = models.CharField(
         verbose_name="Название",
         max_length=MAX_LENGTH_COLLECT_NAME,
         null=False,
         blank=False,
     )
-    reason = models.ForeignKey(
+    reason: models.ForeignKey = models.ForeignKey(
         "Reason",
         on_delete=models.CASCADE,
         verbose_name="Повод",
@@ -39,27 +39,27 @@ class Collect(CreatedField):
         null=False,
         blank=False,
     )
-    description = models.TextField(
+    description: models.TextField = models.TextField(
         verbose_name="Описание",
         max_length=MAX_LENGTH_COLLECT_DESCRIPTION,
     )
-    amount = models.PositiveIntegerField(
+    amount: models.PositiveIntegerField = models.PositiveIntegerField(
         verbose_name="Сумма",
         null=True,
         blank=True,
     )
-    cover = models.ImageField(
+    cover: models.ImageField = models.ImageField(
         verbose_name="Обложка",
         upload_to=UPLOAD_PATH_COLLECT_COVER,
         blank=True,
     )
-    ending = models.DateTimeField(
+    ending: models.DateTimeField = models.DateTimeField(
         verbose_name="Окончание",
         null=False,
         blank=False,
         validators=[validate_future_datetime],
     )
-    contributors = models.ManyToManyField(
+    contributors: models.ManyToManyField = models.ManyToManyField(
         to=User,
         related_name="collect_contributors",
         through="Payment",
@@ -104,7 +104,7 @@ class Collect(CreatedField):
 class Reason(models.Model):
     """Модель цели сбора денежных средств."""
 
-    name = models.CharField(
+    name: models.CharField = models.CharField(
         verbose_name="Название",
         max_length=MAX_LENGTH_REASON_NAME,
         unique=True,
@@ -123,19 +123,19 @@ class Reason(models.Model):
 class Payment(CreatedField):
     """Модель платежа."""
 
-    author = models.ForeignKey(
+    author: models.ForeignKey = models.ForeignKey(
         to=User,
         verbose_name="Автор",
         on_delete=models.CASCADE,
         db_index=True,
     )
-    collect = models.ForeignKey(
+    collect: models.ForeignKey = models.ForeignKey(
         to=Collect,
         verbose_name="Сбор",
         on_delete=models.CASCADE,
         db_index=True,
     )
-    amount = models.PositiveIntegerField(
+    amount: models.PositiveIntegerField = models.PositiveIntegerField(
         null=False,
         blank=False,
     )
