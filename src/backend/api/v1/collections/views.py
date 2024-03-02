@@ -1,3 +1,5 @@
+from django.contrib.auth import get_user_model
+from django.db.models import Prefetch
 from rest_framework.viewsets import ModelViewSet
 
 from api.v1.collections.serializers import (
@@ -5,7 +7,10 @@ from api.v1.collections.serializers import (
     PaymentSerializer,
     ReasonSerializer,
 )
+from api.v1.general.mixins import PerformCreateAuthorMixin
 from apps.collections.models import Collect, Payment, Reason
+
+User = get_user_model()
 
 
 class ReasonsViewSet(ModelViewSet):
@@ -15,20 +20,31 @@ class ReasonsViewSet(ModelViewSet):
     serializer_class = ReasonSerializer
 
 
-class CollectionsViewSet(ModelViewSet):
+class CollectionsViewSet(PerformCreateAuthorMixin, ModelViewSet):
     """Вьюсет денежных сборов."""
 
-    queryset = Collect.objects.select_related(
-        "reason", "author"
-    ).prefetch_related("contributors", "payments")
+    queryset = (
+        Collect.objects.select_related("reason", "author")
+        .only(
+            "id",
+            "author__last_name",
+            "author__first_name",
+            "name",
+            "reason__name",
+            "description",
+            "amount",
+            "cover",
+            "ending",
+        )
+        .prefetch_related(
+            Prefetch("contributors", queryset=User.objects.only("username"))
+        )
+    )
 
     serializer_class = CollectionsSerializer
 
-    def perform_create(self, serializer):
-        serializer.save(author=self.request.user)
 
-
-class PaymentsViewSet(ModelViewSet):
+class PaymentsViewSet(PerformCreateAuthorMixin, ModelViewSet):
     """Вьюсет платежа денежных сборов."""
 
     queryset = Payment.objects.all().select_related(
@@ -36,6 +52,3 @@ class PaymentsViewSet(ModelViewSet):
         "collect__author",
     )
     serializer_class = PaymentSerializer
-
-    def perform_create(self, serializer):
-        serializer.save(author=self.request.user)
