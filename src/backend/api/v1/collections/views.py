@@ -3,7 +3,7 @@ from django.db.models import Prefetch
 from rest_framework.viewsets import ModelViewSet
 
 from api.v1.collections.serializers import (
-    CollectionsSerializer,
+    CollectSerializer,
     PaymentSerializer,
     ReasonSerializer,
 )
@@ -41,7 +41,7 @@ class CollectionsViewSet(PerformCreateAuthorMixin, ModelViewSet):
         )
     )
 
-    serializer_class = CollectionsSerializer
+    serializer_class = CollectSerializer
 
 
 class PaymentsViewSet(PerformCreateAuthorMixin, ModelViewSet):

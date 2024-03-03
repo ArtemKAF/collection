@@ -6,6 +6,7 @@ from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
 
+from api.v1.collections.constants import ERROR_MESSAGE_UNIQUE_COLLECT
 from api.v1.general.mixins import GetAuthorFullNameMixin
 from apps.collections.models import Collect, Payment, Reason
 
@@ -20,9 +21,7 @@ class ReasonSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class CollectionsSerializer(
-    GetAuthorFullNameMixin, serializers.ModelSerializer
-):
+class CollectSerializer(GetAuthorFullNameMixin, serializers.ModelSerializer):
     """Сериализатор денежного сбора."""
 
     author = serializers.SerializerMethodField(read_only=True)
@@ -77,6 +76,29 @@ class CollectionsSerializer(
             )
             cache.set(cache_key, collected_amount)
         return collected_amount
+
+    def validate(self, attrs):
+        """Метод валидации создаваемого денежного сбора."""
+
+        queryset = Collect.objects.filter(
+            author=self.context.get("request").user,
+            reason=attrs.get("reason"),
+            ending__gte=attrs.get("ending"),
+        )
+
+        instance = self.instance
+        if self.context["request"].method in ["PUT", "PATCH"] and instance:
+            queryset = queryset.exclude(id=instance.id)
+            if (
+                "cover" in attrs
+                and attrs["cover"].read() == instance.cover.file.read()
+            ):
+                attrs.pop("cover")
+
+        if queryset.exists():
+            raise serializers.ValidationError(ERROR_MESSAGE_UNIQUE_COLLECT)
+
+        return attrs
 
 
 class PaymentSerializer(GetAuthorFullNameMixin, serializers.ModelSerializer):

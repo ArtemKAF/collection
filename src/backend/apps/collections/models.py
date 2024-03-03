@@ -1,11 +1,15 @@
 from django.contrib.auth import get_user_model
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.functional import cached_property
 
 from apps.collections.constants import (
+    ERROR_TEXT_MIN_VALUE_PAYMENT_AMOUNT,
+    HELP_TEXT_MIN_VALUE_PAYMENT_AMOUNT,
     MAX_LENGTH_COLLECT_DESCRIPTION,
     MAX_LENGTH_COLLECT_NAME,
     MAX_LENGTH_REASON_NAME,
+    MIN_VALUE_PAYMENT_AMOUNT,
     UPLOAD_PATH_COLLECT_COVER,
 )
 from apps.collections.validators import validate_future_datetime
@@ -84,7 +88,7 @@ class Collect(CreatedField):
     def __str__(self):
         """Метод строкового представления сбора."""
 
-        return self.name
+        return f"{self.id}. {self.name}"
 
 
 class Reason(models.Model):
@@ -124,6 +128,13 @@ class Payment(CreatedField):
     amount: models.PositiveIntegerField = models.PositiveIntegerField(
         null=False,
         blank=False,
+        validators=[
+            MinValueValidator(
+                limit_value=MIN_VALUE_PAYMENT_AMOUNT,
+                message=ERROR_TEXT_MIN_VALUE_PAYMENT_AMOUNT,
+            )
+        ],
+        help_text=HELP_TEXT_MIN_VALUE_PAYMENT_AMOUNT,
     )
 
     class Meta:
@@ -134,4 +145,4 @@ class Payment(CreatedField):
     def __str__(self):
         """Метод строкового представления платежа."""
 
-        return f"{self.author.username} - {self.amount}"
+        return f"{self.author.username} - {self.collect.name} - {self.amount}"
